@@ -25,7 +25,42 @@
         </div>
     </header>
     <div class="banner">
-        <img src="images/bg.jpg" alt="Banner image">
+        <img src="images/bg.jpg" class="bg" alt="Banner image">
+        <div class="content">
+            <img src="images/name.png" class="movieTitle" alt="Movie Title">
+            <h4>
+                <span>2020</span>
+                <span><i>12+</i></span>
+                <span>1h 55min</span>
+                <span>Action</span>
+            </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In nulla soluta tenetur nobis
+                 doloremque commodi cum suscipit totam quos? Exercitationem autem cum maiores aspernatur tenetur 
+                 amet laudantium quo voluptatibus labore! commodi cum suscipit totam quos? Exercitationem autem cum maiores aspernatur tenetur amet laudantium quo voluptatibus
+                labore!
+            </p>
+            <div class="buttons">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+            </div>
+        </div>
+        <a class="play" href="#" onclick="toggleVideo()"><img src="images/play.png" alt="Play button">Watch Trailer</a>
     </div>
+
+    <div class="trailer">
+        <video src="images/nature.mp4" controls="true" autoplay="true"></video>
+        <img src="images/close.png" class="close" alt="Close Icon" onclick="toggleVideo()">
+    </div>
+
+
+    <script>
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('.video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
 </body>
 </html>
